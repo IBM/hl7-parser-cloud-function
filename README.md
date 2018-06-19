@@ -60,7 +60,9 @@ Sample in case of a hl7 message parsed as valid of ORU_R01 trigger event type. D
 
 3. [Install IBM Cloud functions CLI plug-in](https://console.bluemix.net/docs/openwhisk/bluemix_cli.html#cloudfunctions_cli)
 
-4. Log into your IBM Cloud account
+### Steps 
+
+1. Log into your IBM Cloud account
 
 ```
 $ bx login 
@@ -68,7 +70,7 @@ $ bx login
 
 If you have a federated ID, use bx login --sso to log in to the IBM Cloud CLI.
 
-4. Run command:
+2. Run command:
 
 ```
 $  ic wsk action create hl7parsercloudfunction hl7parser.jar --main com.hl7.parser.hl7_ingestion_parser.HL7Parser
