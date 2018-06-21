@@ -39,6 +39,7 @@ public class HL7Validation {
 
 		JsonObject objOut= new JsonObject();
 		JsonArray objMetadata = new JsonArray();
+		//We could use also a JsonObject to create objMetadata
 		//JsonObject objMetadata = new JsonObject();
 		JsonObject objMsh= new JsonObject();
 		JsonObject objPid= new JsonObject();
@@ -72,11 +73,13 @@ public class HL7Validation {
 				Terser terser = new Terser(parsedhl7Message);
 				
 				objOut.addProperty("valid", "true");
+				//the following can be used to fill objMetadata when declared as JsonObject
 				//objMsh.addProperty("messagetype", terser.get("/.MSH-9-1") + "_" + terser.get("/.MSH-9-2"));
 				//objMetadata.addProperty("messagetype", terser.get("/.MSH-9-1") + "_" + terser.get("/.MSH-9-2"));
 					
 				String type = terser.get("/.MSH-9-1") + "_" + terser.get("/.MSH-9-2");
 				
+				//we cloud use the terser class to get datatype 
 				//if ( type.equals("ORU") || type.equals("ADT") ) {
 					
 					//objPid.addProperty("patientid", terser.get("/.PID-3-1"));
@@ -101,7 +104,7 @@ public class HL7Validation {
 						objPid.addProperty("patientid", pid.getPatientIDInternalID(0).getCm_pat_id1_IDNumber().getValue());
 						objMetadata.add(objPid);
 					}
-					
+					//the following can be used to fill objMetadata when declared as JsonObject
 					//objOrc.addProperty("uniqueplacerid",terser.get("/.ORC-2-1"));
 					//objMetadata.addProperty("uniqueplacerid",terser.get("/.ORC-2-1"));
 					//objObr.addProperty("universalserviceid",terser.get("/.OBR-4-1") + "_" + terser.get("/.OBR-4-2"));
@@ -117,7 +120,7 @@ public class HL7Validation {
 					}
 					
 				//}
-				
+				//the following can be used to fill objMetadata when declared as JsonObject
 				//objObx.addProperty("observationidentifier",terser.get("/.OBX-3-1") + "_" + terser.get("/.OBX-3-2"));	
 				//objMetadata.addProperty("observationidentifier",terser.get("/.OBX-3-1") + "_" + terser.get("/.OBX-3-2"));
 					

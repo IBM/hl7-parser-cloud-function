@@ -120,7 +120,7 @@ public class HL7Parser {
 			
 			}
 		else {
-			objOut.addProperty("error", "ERROR: The input json object is null");
+			objOut.addProperty("error", "The input json object is null");
 			System.out.println("******ERROR: The input json object is null******");
 		}
 		

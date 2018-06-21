@@ -47,7 +47,7 @@ Sample in case of a hl7 message parsed as valid of ORU_R01 trigger event type. D
 
 ```
   {
-     "error":"ERROR: The input json object is null"
+     "error":"The input json object is null"
   }
 ```
 
@@ -62,7 +62,16 @@ Sample in case of a hl7 message parsed as valid of ORU_R01 trigger event type. D
 
 ### Steps 
 
-1. Log into your IBM Cloud account
+### 1. Clone the repo
+
+1. Clone the repo locally. In a terminal, run:
+
+```
+$ git clone https://github.com/IBM/hl7-parser-cloud-function.git
+```
+2. Build the java project as a Runnable Jar called hl7parser.jar
+
+3. Log into your IBM Cloud account
 
 ```
 $ bx login 
@@ -70,10 +79,10 @@ $ bx login
 
 If you have a federated ID, use bx login --sso to log in to the IBM Cloud CLI.
 
-2. Run command:
+4. Run command:
 
 ```
-$  ic wsk action create hl7parsercloudfunction hl7parser.jar --main com.hl7.parser.hl7_ingestion_parser.HL7Parser
+$  ic wsk action create hl7-parser-cloud-function hl7parser.jar --main com.hl7.parser.hl7_ingestion_parser.HL7Parser
 ```
 * Now you can see and invoke the action from the IBM Cloud UI.
 * Java actions cannot be created with the IBM Cloud UI.
