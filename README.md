@@ -2,7 +2,9 @@
 
 This directory contains a simple IBM Cloud Function in Java, HL7Parser, that uses the HAPI library to handle HL7 file format of whatever trigger event type. It validates, using a default validation rules set the file format, the HL7 input and extracts some data type belonging to different file segment. In addition there are two more classes, HL7Validation and MainHL7Validation, implementing a main class that instantiates and calls the other one, that uses a little bit more specific HAPI library classes related to the ORU_R01 HL7 trigger event. 
 
+
 Refer to IBM Cloud Functions documentation for details at this link: [creating-java-actions](https://console.bluemix.net/docs/openwhisk/openwhisk_actions.html#creating-java-actions).
+
 
 ## Java class input parameter:
  * `JsonObject` The input JSON Object required by IBM Cloud Specifications about Java Cloud Functions and actions. 
