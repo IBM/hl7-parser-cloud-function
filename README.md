@@ -4,6 +4,8 @@ This directory contains a simple IBM Cloud Function in Java, HL7Parser, that use
 
 HL7 or Health Level-7 refers to a set of international standards for transfer of clinical and administrative data between software applications used by various healthcare providers. Hospitals and other healthcare provider organizations typically have many different computer systems used for everything from billing records to patient tracking. All of these systems should communicate with each other. HL7 International specifies a number of flexible standards, guidelines, and methodologies by which various healthcare systems can communicate with each other. These data standards are meant to allow healthcare organizations to easily share clinical information.
 
+The HL7 ORU-R01 message transmits observations and results from the producing system/filler to the ordering system/placer. It may also be used to transmit result data from the producing system to a medical record archival system, or to another system not part of the original order process. ORU messages are also sometimes used to register or link to clinical trials, or for medical reporting purposes for drugs and devices.
+
 Refer to IBM Cloud Functions documentation for details at this link: [creating-java-actions](https://console.bluemix.net/docs/openwhisk/openwhisk_actions.html#creating-java-actions).
 
 
