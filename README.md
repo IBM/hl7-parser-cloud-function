@@ -2,6 +2,7 @@
 
 This directory contains a simple IBM Cloud Function in Java, HL7Parser, that uses the HAPI library to handle HL7 file format of whatever trigger event type. It validates, using a default validation rules set the file format, the HL7 input and extracts some data type belonging to different file segment. In addition there are two more classes, HL7Validation and MainHL7Validation, implementing a main class that instantiates and calls the other one, that uses a little bit more specific HAPI library classes related to the ORU_R01 HL7 trigger event. 
 
+HL7 or Health Level-7 refers to a set of international standards for transfer of clinical and administrative data between software applications used by various healthcare providers. Hospitals and other healthcare provider organizations typically have many different computer systems used for everything from billing records to patient tracking. All of these systems should communicate with each other. HL7 International specifies a number of flexible standards, guidelines, and methodologies by which various healthcare systems can communicate with each other. These data standards are meant to allow healthcare organizations to easily share clinical information.
 
 Refer to IBM Cloud Functions documentation for details at this link: [creating-java-actions](https://console.bluemix.net/docs/openwhisk/openwhisk_actions.html#creating-java-actions).
 
